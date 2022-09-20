@@ -60,6 +60,22 @@ span {
 picture {
   width: 34.5vw;
   line-height: 0;
+  position: relative;
+}
+picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(277, 64%, 61%, 0.39);
+  border-radius: 0rem 1rem 1rem 0;
+}
+picture:hover::before {
+  background-color: transparent;
 }
 picture img {
   width: 100%;
@@ -84,6 +100,9 @@ picture img {
   }
   picture {
     width: auto;
+  }
+  picture::before {
+    border-radius: 1rem 1rem 0rem 0rem;
   }
   picture img {
     border-radius: 1rem 1rem 0rem 0rem;
